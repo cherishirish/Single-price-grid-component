@@ -1,0 +1,157 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+
+
+$cyan: #2bb3b1;
+$lcyan: #4abebd;
+$yellow: hsl(71, 73%, 54%);
+$gray: hsl(204, 43%, 93%);
+$grayblue: hsl(218, 22%, 67%);
+$font: 'Karla', sans-serif;
+
+body {
+  font-family: $font;
+  background-color: #e6eff6;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-ad { 
+  margin: auto;
+  width: 35%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 0.75fr;
+  grid-template-areas:
+   "firstbox firstbox" 
+   "secondbox thirdbox";
+}
+
+
+@media screen and (max-width: 475px) {
+
+    .container {
+      
+    }
+
+   .block-ad {
+     width: 85%;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     
+   }
+
+   
+  }
+
+
+
+.firstbox{
+
+  grid-area: firstbox;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+ 
+  -webkit-box-shadow: 0px -6px 12px 1px rgba(0,0,0,0.11);
+  -moz-box-shadow: 0px -6px 12px 1px rgba(0,0,0,0.11);
+  box-shadow: 0px -6px 12px 1px rgba(0,0,0,0.11);
+
+
+  &__header{
+    padding-bottom: 15px;
+    color: $cyan;
+    font-weight: 700;
+  }
+  &__content:first-line{
+    line-height: 3rem;
+    color: $yellow;
+    font-weight: 700;
+  }
+  &__content {
+    color: $grayblue;
+    line-height: 1.5rem;
+  }
+
+
+  
+}
+
+.secondbox {
+  grid-area: secondbox;
+  padding: 40px;
+  background-color: $cyan;
+  color: white;
+  border-radius: 0 0 0 10px;
+
+  &__header {
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  &__content {
+    font-size: 16px;
+    color: $gray;
+    line-height: 2.2rem;
+  }
+  &__button {
+    margin-top: 20px;
+    background-color: $yellow;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    line-height: 2.5rem;
+    border-radius: 5px;
+
+  -webkit-box-shadow: 0px 8px 7px 1px rgba(0,0,0,0.17);
+  -moz-box-shadow: 0px 8px 7px 1px rgba(0,0,0,0.17);
+  box-shadow: 0px 8px 7px 1px rgba(0,0,0,0.17); 
+  }
+
+}
+
+  @media screen and (max-width: 475px) {
+  .secondbox {
+    border-radius: 0 0 0 0;
+  }
+
+}
+
+
+.thirdbox {
+  grid-area: thirdbox;
+  padding: 40px;
+  background-color: $lcyan;
+  color: $gray;
+  border-radius: 0 0 10px 0;
+
+  &__header {
+      font-weight: 700;
+      padding-bottom: 20px;
+  }
+
+  &__content{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 475px)  {
+.thirdbox {
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 4rem;
+}
+}
+
