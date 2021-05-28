@@ -23,8 +23,7 @@ body {
 
 .block-ad {
   margin: auto;
-  width: 35%;
-  height: 50vh;
+  width: 50%; 
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -34,7 +33,20 @@ body {
       grid-template-areas: "firstbox firstbox"  "secondbox thirdbox";
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 725px) {
+  .block-ad {
+    width: 60%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
   .block-ad {
     width: 85%;
     margin: auto;
@@ -111,7 +123,7 @@ body {
   box-shadow: 0px 8px 7px 1px rgba(0, 0, 0, 0.17);
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 725px) {
   .secondbox {
     border-radius: 0 0 0 0;
   }
@@ -138,7 +150,7 @@ body {
   line-height: 1.5rem;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 725px) {
   .thirdbox {
     border-radius: 0 0 10px 10px;
     margin-bottom: 4rem;
